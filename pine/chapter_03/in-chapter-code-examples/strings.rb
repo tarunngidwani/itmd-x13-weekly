@@ -28,6 +28,16 @@ puts '2 * 5'
 
 puts
 
+# Chap 3: Backslash: The Escape Character, Page 15-16
+# backslash escapes the apostrophe and the backslash itself
+puts 'You\'re swell!'
+puts 'backslash at the end of a string:  \\'
+puts 'up\\down'
+# Does not escape a d but does escape itself
+puts 'up\down'
+
+puts
+
 # Chap 3: Problems, Page 15
 # Error: No implicit conversion of Fixnum into String (TypeError)
 puts '12' + 12
