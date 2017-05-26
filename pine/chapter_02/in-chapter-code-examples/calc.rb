@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Chap 2: Page 9
 puts 1 + 2
 
