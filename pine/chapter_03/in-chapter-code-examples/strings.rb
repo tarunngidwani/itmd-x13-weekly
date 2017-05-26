@@ -25,3 +25,12 @@ puts
 puts 2 * 5
 puts '2' * 5
 puts '2 * 5'
+
+puts
+
+# Chap 3: Problems, Page 15
+# Error: No implicit conversion of Fixnum into String (TypeError)
+puts '12' + 12
+puts '2' * '5'
+puts 'Betty' + 12
+puts 'Fred' * 'John'
