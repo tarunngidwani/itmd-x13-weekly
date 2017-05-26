@@ -24,3 +24,10 @@ puts 'Wow!  ' + name
 puts 'is a really long name!'
 
 puts
+
+# Reassigning different objects to same variable, Page 18
+composer = 'Mozart'
+puts composer + ' was "da bomb" in his day.'
+
+composer = 'Beethoven'
+puts 'But I prefer ' + composer + ', personally.'
