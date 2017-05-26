@@ -7,3 +7,20 @@ puts '...you can say that again...'
 puts '...you can say that again...'
 
 puts
+
+# Variable Creation & Assignment , Page 17-18
+#     Variable name: can be any sequence of letters and numbers
+#     in Ruby, the first character needs to be a lowercase letter
+# **Variable my_string points to the actual string**
+my_string = '...you can say that again...'
+puts my_string
+puts my_string
+
+puts
+
+name = 'Anya Christina Emmanuella Jenkins Harris'
+puts 'My name is ' + name + '.'
+puts 'Wow!  ' + name
+puts 'is a really long name!'
+
+puts
