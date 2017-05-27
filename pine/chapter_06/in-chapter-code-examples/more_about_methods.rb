@@ -41,3 +41,21 @@ puts 'What is you full name?'
 name = gets.chomp
 puts 'Did you know there are ' + name.length.to_s + ' characters'
 puts 'in your name, ' + name + '?'
+
+puts
+
+# Page 30
+# letters will remain unchanged
+# -> upcase: changes every lowercase letter to uppercase
+# -> downcase: changes every uppercase letter to lowercase
+# -> swapcase: switches the case of every letter in the string
+# -> capitalize: just like downcase except it switches the
+#                first character to uppercase
+letters = 'aAbBcCdDeE'
+puts letters.upcase
+puts letters.downcase
+puts letters.swapcase
+puts letters.capitalize
+# Only capitalizes the first character, not the first letter
+puts ' a'.capitalize
+puts letters
