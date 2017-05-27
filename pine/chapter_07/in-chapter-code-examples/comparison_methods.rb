@@ -2,7 +2,7 @@
 
 # Chapter 7
 
-# Comparison Methods, Page 38-39
+# Comparison Methods, Page 37-39
 puts 1 > 2
 puts 1 < 2
 
