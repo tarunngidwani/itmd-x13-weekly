@@ -4,7 +4,7 @@
 # Branching, Page 39
 
 print 'Hello, what\'s your name? '
-name = gets.chomp
-puts "Hello, #{name.capitalize}."
+name = gets.chomp.capitalize
+puts "Hello, #{name}."
 
-puts 'What a lovely name!' if name.downcase == 'chris'
+puts 'What a lovely name!' if name == 'Chris'
