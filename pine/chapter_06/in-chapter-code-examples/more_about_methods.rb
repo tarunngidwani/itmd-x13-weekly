@@ -59,3 +59,29 @@ puts letters.capitalize
 # Only capitalizes the first character, not the first letter
 puts ' a'.capitalize
 puts letters
+
+puts
+
+# Visual formatting of strings, Page 30-31
+
+# -> center: adds spaces to the beginning and end
+#            of the string to make it centered
+line_width = 50
+puts 'Old Mother Hubbard'.center line_width
+puts 'Sat in her cupboard'.center line_width
+puts 'Eating her curds and whey,'.center line_width
+puts 'When along came a spider'.center line_width
+puts 'Who sat down beside her'.center line_width
+puts 'And scared her poor shoe dog away.'.center line_width
+
+puts
+
+# -> ljust: left justify, pads spaces at the end of the string
+# -> rjust: right justify, pads spaces at the beginning of the string
+#    number of padding spaces = (padding-int-input - string.length)
+line_width = 40
+str = '-->text<--'
+puts str.ljust line_width
+puts str.center line_width
+puts str.rjust line_width
+puts str.ljust(line_width / 2) + str.rjust(line_width / 2)
