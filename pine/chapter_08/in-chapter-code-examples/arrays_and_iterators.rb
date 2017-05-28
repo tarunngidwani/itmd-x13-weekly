@@ -48,3 +48,24 @@ puts
 3.times { puts 'Hip-Hip-Hooray!' }
 puts
 2.times { puts '...you can say that again...' }
+
+puts
+
+# More array methods
+# - to_s: gives you a nice readable string description
+#         in this case makes it clear that this is an
+#         array of strings
+# - join: calls to_s on the individual elements of the array
+#         and adds the string you provide in between those
+#         elements, combining them all to form one string
+foods = %w[artichoke brioche caramel]
+
+puts foods
+puts
+puts foods.to_s
+puts
+puts foods.join(', ')
+puts
+puts foods.join(' :) ') + ' 8)'
+
+200.times { puts [] }
