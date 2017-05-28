@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Chapter 7
-# Branching, Page 44-47
+# Logic, Page 44-47
 
 # Without using elsif, some duplicated code
 print 'Hello, what\'s your name? '
