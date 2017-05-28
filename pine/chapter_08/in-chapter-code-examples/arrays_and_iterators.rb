@@ -28,3 +28,15 @@ other_peeps[0] = 'Ah-ha'
 other_peeps[1] = 'Seedee'
 other_peeps[0] = 'beebee Ah-ha'
 puts other_peeps
+
+puts
+
+# the each method
+languages = %w[English Norwegian Ruby]
+
+languages.each do |lang|
+  puts "I love #{lang}!"
+  puts 'Don\'t you?'
+end
+puts 'And let\'s hear it for Java!'
+puts '<crickets chirp in the distance>'
