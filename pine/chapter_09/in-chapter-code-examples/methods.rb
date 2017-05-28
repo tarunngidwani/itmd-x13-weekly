@@ -23,3 +23,29 @@ say_moo 3
 puts 'oink-oink'
 # Error: Wrong number of arguments (0 of 1)
 # say_moo
+
+puts
+
+# Local variables
+def double_this(num)
+  num_times_two = num * 2
+  puts "#{num} doubled is #{num_times_two}"
+end
+
+double_this 44
+# Error: undefined local variable num_times_two,
+#        local to the method double_this, cannot
+#        be used or referenced outside of that method
+# puts num_times_two.to_s
+
+puts
+
+tough_var = 'You can\'t even touch my variable!'
+
+def little_pest(tough_var)
+  tough_var = nil
+  puts 'HAHA!  I ruined your variable!'
+end
+
+little_pest tough_var
+puts tough_var
