@@ -69,3 +69,23 @@ puts
 puts foods.join(' :) ') + ' 8)'
 
 200.times { puts [] }
+
+puts
+
+# - push: adds an object to the end of your array
+# - pop: removes the last object from the array and
+#        tells you what it was
+# - last: tells you what's at the end of the array,
+#         except that it leaves the array alone
+# Note: push and pop actually change the array
+favorites = %w[]
+favorites.push 'raindrops on roses'
+favorites.push 'whiskey on kittens'
+
+puts favorites[0]
+puts favorites.last
+puts favorites.length
+
+puts favorites.pop
+puts favorites
+puts favorites.length
