@@ -40,3 +40,11 @@ languages.each do |lang|
 end
 puts 'And let\'s hear it for Java!'
 puts '<crickets chirp in the distance>'
+
+puts
+
+# Integer iterators
+# - Always followed by a block, do...end
+3.times { puts 'Hip-Hip-Hooray!' }
+puts
+2.times { puts '...you can say that again...' }
