@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Chapter 7
-# Looping, Page 42-43
+# Looping, Page 42-44
 
 # Loop #1: to get user input
 input = ''
