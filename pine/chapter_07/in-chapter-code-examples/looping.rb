@@ -22,3 +22,16 @@ while 'Spike' > 'Angel'
   break if input.downcase == 'bye'
 end
 puts 'Come again soon!'
+
+puts
+
+# Loop #3: to get user input
+#          using the Kernel loop
+#          construct
+puts 'Loop 3:'
+loop do
+  input = gets.chomp
+  puts input
+  break if input.downcase == 'bye'
+end
+puts 'Come again soon!'
