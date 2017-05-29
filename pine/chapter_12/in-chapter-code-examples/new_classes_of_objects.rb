@@ -75,3 +75,22 @@ weird_hash[[]] = 'emptiness'
 weird_hash[Time.new] = 'no time like the present'
 
 weird_hash.each_pair { |key, value| puts "#{key}:  #{value}" }
+
+puts
+
+# The Range Class, Page 99
+letters = 'a'..'c' # Contains characters a, b, and c
+
+letters.each { |letter| puts letter }
+# Converting a range to an array
+puts letters.to_a == %w[a b c]
+
+('A'..'Z').each { |capital_letter| print capital_letter }
+puts
+
+god_bless_the_sevenths = 1970..1979
+puts god_bless_the_sevenths.min
+puts god_bless_the_sevenths.max
+puts god_bless_the_sevenths.include? 1979
+puts god_bless_the_sevenths.include? 1980
+puts god_bless_the_sevenths.include? 1974.5
