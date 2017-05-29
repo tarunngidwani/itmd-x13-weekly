@@ -21,10 +21,7 @@ class Die
   end
 end
 
-die = Die.new
-die.roll
-puts die.showing
-puts die.showing
-die.roll
-puts die.showing
-puts die.showing
+# Does not work because the die was never rolled,
+# so @number_showing was never set, so when we
+# call showing it returns nil
+puts Die.new.showing
