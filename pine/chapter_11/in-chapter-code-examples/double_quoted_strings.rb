@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Chapter 11
-# Double quoted strings, Page 87-89
+# Double quoted strings, Page 87-88
 
 buffy_quote_one = '\'Kiss rocks\'?
                    Why would anyone want to kiss...
@@ -36,3 +36,16 @@ puts
 puts 'single (\') and double (") quotes'
 # - Escape double quotes in double-quoted strings (but not single quotes)
 puts "single (') and double (\") quotes"
+
+puts
+
+# String interpolation, Page 88-89
+# - Variable names can be used right in the string
+# - Can use any expression you want right in the string
+#   with #{} around it
+name = 'Luke'
+zip = 90_210
+
+puts "Name = #{name}, Zipcode = #{zip}"
+puts
+puts "#{2 * 10**4 + 1} Leagues Under the Sea, THE REVENGE!"
