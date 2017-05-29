@@ -27,3 +27,41 @@ puts
 do_you_like = proc { |good_stuff| puts "I *really* like #{good_stuff}!" }
 do_you_like.call 'chocolate'
 do_you_like.call 'Ruby'
+
+puts
+
+# Procs can be passed into methods, whereas
+# methods cannot be passed into other methods
+# Because Procs are object, but method are not
+
+def do_self_importantly(some_proc)
+  puts 'Everybody just HOLD ON!  I\'m doing something...'
+  some_proc.call
+  puts 'OK everyone, I\'m done.  As you were.'
+end
+
+do_self_importantly(proc { puts 'hello' })
+do_self_importantly(proc { puts 'goodbye' })
+
+puts
+
+# Procs allow us to write methods that will determine
+# how many times (or even whether) to call a proc
+
+def maybe_do(some_proc)
+  some_proc.call if rand(2).zero?
+end
+
+def twice_do(some_proc)
+  2.times { some_proc.call }
+end
+
+wink = proc { puts '<wink>' }
+glance = proc { puts '<glance>' }
+
+maybe_do wink
+maybe_do wink
+maybe_do glance
+maybe_do glance
+twice_do wink
+twice_do glance
