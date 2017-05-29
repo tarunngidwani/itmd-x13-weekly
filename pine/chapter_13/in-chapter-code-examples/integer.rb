@@ -10,6 +10,7 @@
 #   and now all integers can use it
 # - This can be done with any method in any class, even the
 #   built-in methods
+# ** Self can be used to access the object the method is being called on **
 
 class Integer
 
