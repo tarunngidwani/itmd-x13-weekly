@@ -10,6 +10,11 @@
 # - They have an @ in front of their names
 # **
 
+# - As soon as the object is created, initialize is automatically called
+# - Use new to create a new object, and
+# - initialize is then called automatically (if defined in your class)
+# - new is a method of the class, built in to all classes
+# - initialize is a method of the instance
 class Die
 
   def initialize
