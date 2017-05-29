@@ -45,3 +45,33 @@ puts
 # times zones and daylight saving time
 # altogether
 puts Time.gm 1955, 11, 5
+
+puts
+
+# The Hash Class, Page 98-99
+dict_array = []
+dict_hash = {}
+
+dict_array[0] = 'candle'
+dict_array[1] = 'glasses'
+dict_array[2] = 'truck'
+dict_array[3] = 'Alicia'
+dict_hash['shia-a'] = dict_array[0]
+dict_hash['shaya']  = dict_array[1]
+dict_hash['shasha'] = dict_array[2]
+dict_hash['sh-sha'] = dict_array[3]
+
+puts dict_array
+dict_hash.each_pair { |c_word, word| puts "#{c_word}:  #{word}" }
+
+puts
+
+# The key of a hash could be any kind of object:
+# integers, arrays and other hashes
+weird_hash = Hash.new
+
+weird_hash[12] = 'monkeys'
+weird_hash[[]] = 'emptiness'
+weird_hash[Time.new] = 'no time like the present'
+
+weird_hash.each_pair { |key, value| puts "#{key}:  #{value}" }
