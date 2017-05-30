@@ -65,3 +65,25 @@ maybe_do glance
 maybe_do glance
 twice_do wink
 twice_do glance
+
+puts
+
+# Methods that Return Procs
+# - Procs can be created and returned in methods
+# - Allows for:
+#              -> lazy evaluation
+#              -> infinite data structures
+#              -> curying
+
+def compose(proc1, proc2)
+  proc { |num| proc2.call(proc1.call(num)) }
+end
+
+square_it = proc { |num| num * num }
+double_it = proc { |num| num + num }
+
+double_then_square = compose double_it, square_it
+square_then_double = compose square_it, double_it
+
+puts double_then_square.call 5
+puts square_then_double.call 5
