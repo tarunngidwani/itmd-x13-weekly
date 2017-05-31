@@ -12,7 +12,6 @@ def greet_user
 
   puts "\nWelcome, #{first_name.capitalize} #{middle_name.capitalize} "\
        "#{last_name.capitalize}"
-
 end
 
 # Prints out the prompt string and
