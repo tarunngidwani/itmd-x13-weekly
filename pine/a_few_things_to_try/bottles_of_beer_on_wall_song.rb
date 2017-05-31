@@ -4,28 +4,27 @@
 # Write a program that prints out the lyrics to
 # the beloved classic,
 # "99 Bottles of Beer on the Wall"
+require 'active_support/inflector'
 
 def generate_bottles_on_wall_song(num_of_beer_bottles)
+  str = 'bottle'
+  bottle_str = str.pluralize(num_of_beer_bottles)
+  bottle_str_one = str.pluralize(num_of_beer_bottles - 1)
 
-  if num_of_beer_bottles > 1
-    print "#{num_of_beer_bottles} bottles of beer on the wall"
-    print ", #{num_of_beer_bottles} bottles of beer.\n"
+  return if num_of_beer_bottles.zero?
 
-    print 'Take one down and pass it around'
-    if num_of_beer_bottles - 1 > 1
-      print ", #{num_of_beer_bottles - 1} bottles of beer on the wall.\n"
-    else
-      print ", #{num_of_beer_bottles - 1} bottle of beer on the wall.\n"
-    end
+  print "#{num_of_beer_bottles} #{bottle_str} of beer on the wall" \
+            ", #{num_of_beer_bottles} #{bottle_str} of beer.\n"
+
+  print 'Take one down and pass it around'
+  if (num_of_beer_bottles - 1).zero?
+    puts ', no more bottles of beer on the wall.'
+  else
+    print ", #{num_of_beer_bottles - 1} #{bottle_str_one} of beer on " \
+              "the wall.\n"
 
     puts
-    generate_bottles_on_wall_song(num_of_beer_bottles - 1)
-  else
-    print "#{num_of_beer_bottles} bottle of beer on the wall"
-    print ", #{num_of_beer_bottles} bottle of beer.\n"
-
-    puts 'Take one down and pass it around, no more bottles of ' \
-         'beer on the wall.'
+    generate_bottles_on_wall_song num_of_beer_bottles - 1
   end
 end
 
