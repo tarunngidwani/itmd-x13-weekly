@@ -22,3 +22,25 @@
 
 puts 'combergearl thememberate' if     5 == 2**2 + 1**1
 puts 'supposine follutify'      unless 'Chris'.length == 5
+
+puts
+
+# Another way of writing methods that take blocks
+# ** &block turns a block into a proc **
+# call proc: proc_name.call
+
+# Turning block into proc and calling it explicitly
+def do_it_twice(&block)
+  2.times { block.call }
+end
+
+do_it_twice { puts 'murditivent flavitemphan siresent litics' }
+
+puts
+
+# Shorter way, using yield
+def do_it_twice
+  2.times { yield }
+end
+
+do_it_twice { puts 'buritiate mustripe lablic acticise' }
