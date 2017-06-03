@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'say/example_experiment'
+
   get 'say/hello'
 
   get 'say/goodbye'

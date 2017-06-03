@@ -4,4 +4,6 @@ class SayController < ApplicationController
   end
 
   def goodbye; end
+
+  def example_experiment; end
 end
