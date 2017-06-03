@@ -3,6 +3,5 @@ class SayController < ApplicationController
     @time = Time.now
   end
 
-  def goodbye
-  end
+  def goodbye; end
 end
