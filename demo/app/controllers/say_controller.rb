@@ -5,5 +5,7 @@ class SayController < ApplicationController
 
   def goodbye; end
 
-  def example_experiment; end
+  def example_experiment
+    @files = Dir.glob('*').sort
+  end
 end
