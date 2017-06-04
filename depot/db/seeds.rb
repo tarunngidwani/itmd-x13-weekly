@@ -5,3 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+product_one_description = %(
+  <p>
+    <em>Native App, Multiple Platforms</em>
+    Answer the question "Can we build this for ALL the
+    devices?" with a resounding YES. This book will help you
+    get there with a real-world introduction to seven
+    platforms, whether you're new to mobile or an experienced
+    developer needing to expand your options. Plus, you'll
+    find out which cross-platform solution makes the most
+    sense for your needs
+  </p>
+)
+
+products = [
+  {
+    title: 'Seven Mobile Apps in Seven Week',
+    description: product_one_description,
+    image_url: '7apps.jpg',
+    price: 26.00
+  }
+]
+
+Product.delete_all
+
+Product.create!(products)
