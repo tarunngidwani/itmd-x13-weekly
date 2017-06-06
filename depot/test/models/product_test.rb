@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+  # Done by default for tests
+  # - Empties out the model under test's table in the
+  #   test db and fills it will data specified in the
+  #   model under test's fixtures file
+  fixtures :products
 
   test 'product attributes must not be empty' do
     product = Product.new
