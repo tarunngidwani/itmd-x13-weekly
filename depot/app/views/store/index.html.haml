@@ -8,4 +8,4 @@
     %h3= product.title
     = sanitize product.description
     %div{class: 'price_line'}
-      %span{class: 'price'}= sprintf '$%0.02f', product.price
+      %span{class: 'price'}= number_to_currency product.price
