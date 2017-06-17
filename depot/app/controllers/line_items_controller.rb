@@ -29,7 +29,7 @@ class LineItemsController < ApplicationController
   def create
     product_id = params[:product_id]
     cart_id = @cart.id
-    @line_item = LineItem.new(product_id: product_id, cart_id: cart_id)
+    @line_item = add_or_update_line_item product_id, cart_id
 
     respond_to do |format|
       if @line_item.save
