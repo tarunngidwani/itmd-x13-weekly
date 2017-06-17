@@ -4,7 +4,7 @@
 
 %ul
   - @cart.line_items.each do |line_item|
-    %li= line_item.product.title
+    %li= "#{line_item.quantity} X #{line_item.product.title}"
 
 = link_to 'Edit', edit_cart_path(@cart)
 \|
