@@ -1,10 +1,17 @@
 %p#notice= notice
 
-%h2 Your Pragmatic Cart
+%h2 Your Cart
 
-%ul
+%table
   - @cart.line_items.each do |line_item|
-    %li= "#{line_item.quantity} X #{line_item.product.title}"
+    %tr
+      %td= "#{line_item.quantity} X "
+      %td= line_item.product.title
+      %td{class: 'item_price'}= number_to_currency line_item.total_price
+
+  %tr{class: 'total_line'}
+    %td{colspan: 2} Total
+    %td{class: 'total_cell'}= number_to_currency @cart.total_price
 
 = button_to 'Empty Cart', @cart, method: :delete,
             data: { confirm: 'Are you sure?' }
