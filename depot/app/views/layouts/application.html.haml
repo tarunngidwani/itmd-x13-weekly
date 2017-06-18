@@ -16,7 +16,8 @@
       %div{id: 'side'}
 
         %div{id: 'cart'}
-          = render @cart
+          -if @cart
+            = render @cart
 
         %ul
           %li= link_to 'Home'     , 'http://www....'
