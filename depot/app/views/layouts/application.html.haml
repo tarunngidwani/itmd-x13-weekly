@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title Pragprog Books Online Store
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body{class: "#{controller.controller_name}"}
+    %div{id: 'banner'}
+      = image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf'
+      %span{class: 'title'}= @page_title
+
+    %div{id: 'columns'}
+      %div{id: 'side'}
+        %ul
+          %li= link_to 'Home'     , 'http://www....'
+          %li= link_to 'Questions', 'http://www..../faq'
+          %li= link_to 'News'     , 'http://www..../news'
+          %li= link_to 'Contact'  , 'http://www..../contact'
+      %div{id: 'main'}
+        = yield
