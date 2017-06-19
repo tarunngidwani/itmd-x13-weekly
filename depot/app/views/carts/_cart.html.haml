@@ -1,13 +1,12 @@
-- unless cart.line_items.empty?
-  %h2 Your Cart
+%h2 Your Cart
 
-  %table
+%table
 
-    = render cart.line_items
+  = render cart.line_items
 
-    %tr{class: 'total_line'}
-      %td{colspan: 2} Total
-      %td{class: 'total_cell'}= number_to_currency cart.total_price
+  %tr{class: 'total_line'}
+    %td{colspan: 2} Total
+    %td{class: 'total_cell'}= number_to_currency cart.total_price
 
-  = button_to 'Empty Cart', cart, method: :delete,
+= button_to 'Empty Cart', cart, method: :delete,
               data: { confirm: 'Are you sure?' }
