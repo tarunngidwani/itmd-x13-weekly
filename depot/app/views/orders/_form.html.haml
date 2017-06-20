@@ -17,6 +17,7 @@
     = f.email_field :email, size: 40
   .field
     = f.label :pay_type
-    = f.number_field :pay_type
+    = f.select :pay_type, Order.pay_types.keys,
+               prompt: 'Select a payment method'
   .actions
     = f.submit 'Save'
