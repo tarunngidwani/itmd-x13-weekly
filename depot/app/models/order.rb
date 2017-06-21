@@ -5,4 +5,5 @@ class Order < ApplicationRecord
     'Purchase order': 2
   }
   validates :name, :address, :email, presence: true
+
 end
